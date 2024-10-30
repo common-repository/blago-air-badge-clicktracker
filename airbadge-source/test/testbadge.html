@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>blago AIR Badge Demo</title>
+
+	<script type="text/javascript" src="swfobject.js"></script>
+	<script type="text/javascript" src="airdlcounter.js"></script>
+
+</head>
+<body>
+
+
+	<div id="flashcontent" style="width:215px; height:180px;">
+		<strong>Please upgrade your Flash Player</strong>
+		This is the content that would be shown if the user does not have Flash Player 6.0.65 or higher installed.
+	</div>
+
+	<script type="text/javascript">
+		// <![CDATA[
+
+		var so = new SWFObject("AIRInstallBadge_hh.swf", "badge", "215", "180", "9.0.115", "#000000");
+		// version 9.0.115 or greater is required for launching AIR apps.
+		so.addVariable("airversion", "1.5");
+		so.addVariable("appname", "Sample Air App Name");
+		so.addVariable("appurl", "http://www.blagoworks.nl/telexer/update/install_blagoTelexer_209.air");
+		so.addVariable("image", "badge_img.jpeg");
+		so.addVariable("appid", "sampleairappid-2");
+		so.addVariable("pubid", "samplepubid");
+		so.addVariable("appversion", "2.09");
+		so.addVariable("titlecolor", "#ff9900");
+		so.addVariable("str_close", "Back");
+		so.addVariable("str_err_airswf", "<u>Running locally?</u><br/><br/>The AIR proxy swf won't load properly when this is run from the local file system.");
+		so.addVariable("siteurl", "http://yoururladdedbyplugin");
+		
+		so.write("flashcontent");
+		
+		// ]]>
+	</script>
+   
+	</body>
+</html>
